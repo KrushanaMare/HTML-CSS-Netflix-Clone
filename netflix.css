@@ -1,0 +1,268 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #000;
+    color: #fff;
+}
+
+.heading{
+    background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("images/header-image.png");
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.logo{
+    width: 150px;
+    cursor: pointer;
+}
+
+button{
+    padding: 7px 20px;
+    background: #db0001;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#lang img{
+    width: 15px;
+    margin-right: 10px;
+}
+
+#lang{
+    background: transparent;
+    border: 1px solid white;
+}
+
+.heading-content{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    margin-top: 100px;
+    text-align: center;
+}
+
+.heading-content h1{
+    font-size: 60px ;
+    font-weight: 60px;
+    max-width: 700px;
+}
+
+.heading-content h3{
+     font-size: 30px; 
+     margin-bottom: 20px;
+     font-weight: 400px;
+
+}
+
+.email-signup{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 4px;
+}
+.email-signup input{
+    flex: 1;
+    border: none;
+    outline: none;
+    margin-left: 20px;
+
+}
+.email-signup button{
+    border: none;
+    outline: none;
+    padding: 8px 20px;
+    background: red;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 0;
+}
+
+/* Features CSS */
+
+.features{
+    padding: 50px 12%;
+    font-size: 22px;
+}
+
+.rows{
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.tex-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.tex-col h2{
+    flex-basis: 50%;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.img-col img{
+    width: 90%;
+    margin: auto;
+}
+
+/*FAQ CSS*/
+.faq{
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 10px;
+}
+
+.faq h2{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.que{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+.que li{
+    list-style-type: none;
+    padding: 5px;
+    width: 100%;
+}
+
+.que li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    background: #303030;
+    cursor: pointer;
+    margin-bottom: 2px;
+    position: relative;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+label::after{
+    content: "+" ;
+    font-size: 30px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+
+}
+
+.que .content{
+    background: #303030;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    text-align: left;
+    transition: max-height 0.5s, padding 0.5s;
+}
+.que input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+    font-size: 18px;
+}
+
+.que input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+.faq small{
+    font-size: 15px;
+}
+.faq .email-signup{
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+
+/* FOOTER CSS */
+.footer{
+    padding: 50px 15% 10px;
+    border-top: 6px solid #333;
+    color: #777;
+}
+.footer h2{
+    font-size: 18px 400;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.footer .rows{
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 0;
+}
+.footer .col{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.footer .col a{
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer #lang{
+    color: #777;
+    padding: 10px 20px;
+    border-radius: 3px;
+
+}
+
+.footer .copyright{
+    font-size: 14px;
+    padding: 20px 0;
+}
+
+/* Media Queries (To make website Responsive) */
+@media only screen and (max-width: 768px){
+
+    .heading-content h1{
+        font-size: 40px !important;
+    }
+    .heading-content h3{
+        font-size: 20px !important;
+    }
+    .heading nav img{
+        width: 100px;
+    }
+    .heading nav button{
+        padding: 7px 10px;
+    }
+    .features .rows{
+        flex-direction: column;
+    }
+    .features .rows:nth-child(even) {
+        flex-direction: column-reverse;
+    }
+}
